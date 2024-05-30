@@ -1,0 +1,32 @@
+{
+    "name": "Generic Scrape Extension",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Generic Scrape Extension"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "popup.js"
+            ],
+            "matches": [
+                "*://*/*"
+            ]
+        }
+    ]
+}
