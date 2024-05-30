@@ -99,13 +99,9 @@ function toggleSnow() {
         snowRunning = true;
     }
 }
-// Define a function to scrape all HTML on the page
-function scrapeHTML(): string {
-    return document.documentElement.outerHTML;
-}
+
 if (chrome.runtime && chrome.runtime.connect) {
     const port = chrome.runtime.connect();
-    port.postMessage({ type: 'contentScriptMessage', data: scrapeHTML() });
 
     port.onMessage.addListener((message) => {
         console.log('Received message from background script:', message);
