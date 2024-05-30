@@ -2,12 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
   const [snowColor, setSnowColor] = useState('white');
-
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newSnowColor = event.target.value;
@@ -21,11 +16,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="title">Sample React SPA</h1>
-      <div className="row">
-        <p>Count: {count}</p>
-        <button className="button" onClick={incrementCount}>Increment Count</button>
-      </div>
+      <h1 className="title">Let it Snow!</h1>
       <div className="row">
         <label htmlFor="snow-color">Snow Color:</label>
         <select id="snow-color" value={snowColor} onChange={handleChange}>
