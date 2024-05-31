@@ -1,5 +1,5 @@
 {
-    "name": "Generic Scrape Extension",
+    "name": "Let it Snow",
     "version": "1.0.0",
     "manifest_version": 3,
     "background": {
@@ -17,7 +17,7 @@
     ],
     "action": {
         "default_popup": "popup.html",
-        "default_title": "Generic Scrape Extension"
+        "default_title": "Let it Snow"
     },
     "web_accessible_resources": [
         {
